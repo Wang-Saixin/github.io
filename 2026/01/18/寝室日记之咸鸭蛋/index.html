@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>新の狗窝</title>
+    <title>寝室日记之咸鸭蛋 | 新の狗窝</title>
     <meta name="author" content="" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -47,7 +47,13 @@
 
 
 
-<script src="/js/lib/home.js"></script>
+
+<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
+
+
+
 
 <link rel="stylesheet" href="/css/main.css" />
 
@@ -157,39 +163,17 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="home-head">
-    <div
-        id="home-background"
-        ref="homeBackground"
-        data-images="/images/beijing.jpg"
-    ></div>
-    <div id="home-info" @click="homeClick">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>新の狗窝</h1>
-                <h3></h3>
-                <h5></h5>
-            </div>
-        </span>
+            <div class="article">
+    <div>
+        <h1>寝室日记之咸鸭蛋</h1>
     </div>
-</div>
-<div
-    id="home-posts-wrap"
-    ref="homePostsWrap"
-    true
->
-    <div id="home-posts">
-        
-
-<div class="post">
-    <a href="/2026/01/18/%E5%AF%9D%E5%AE%A4%E6%97%A5%E8%AE%B0%E4%B9%8B%E5%92%B8%E9%B8%AD%E8%9B%8B/">
-        <h2 class="post-title">寝室日记之咸鸭蛋</h2>
-    </a>
-    <div class="category-and-date">
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/1/18
+        </span>
         
         <span class="category">
             <a href="/categories/%E4%B8%AA%E4%BA%BA%E7%94%9F%E6%B4%BB/">
@@ -200,19 +184,40 @@
             </a>
         </span>
         
-        <span class="date">
+        
+        <span class="tags">
             <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
+                <i class="fa-solid fa-tags fa-fw"></i>
             </span>
-            2026/1/18
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%97%A5%E8%AE%B0/" style="color: #00a596">
+                    日记
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E7%94%9F%E6%B4%BB/" style="color: #ff7d73">
+                    生活
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%90%83%E9%A5%AD/" style="color: #03a9f4">
+                    吃饭
+                </a>
+            </span>
+            
         </span>
         
-        
     </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>大家好，我是 wsx。今天济南的风虽然没把泉城广场的泉标吹歪，但却把我对舍友的信任吹散了。故事的起因很简单：一枚咸鸭蛋，和一位永远活在自己饭碗里的舍友——dty。</p>
+    
+    <div class="content" v-pre>
+        <p>大家好，我是 wsx。今天济南的风虽然没把泉城广场的泉标吹歪，但却把我对舍友的信任吹散了。故事的起因很简单：一枚咸鸭蛋，和一位永远活在自己饭碗里的舍友——dty。</p>
 <h3 id="1-所谓默契，全是我的一厢情愿"><a href="#1-所谓默契，全是我的一厢情愿" class="headerlink" title="1. 所谓默契，全是我的一厢情愿"></a>1. 所谓默契，全是我的一厢情愿</h3><p>傍晚时分，我和 dty 相约去吃那家挺火的<strong>沈阳爆炒</strong>。排队打饭时，我眼尖地瞅见这货顺手拿了一个咸鸭蛋。</p>
 <p>当时我心里就开始了疯狂的心理建设：<br><em>“以我对他的了解，这一个蛋他肯定吃不完。”</em><br><em>“为了避免浪费，待会我就勉为其难地帮他消灭那个流油的蛋黄吧。”</em></p>
 <p>基于这种“深厚”的舍友情谊，我甚至没给自己买蛋，甚至还贴心地在旁边给他买了一瓶<strong>蜂蜜柚子水</strong>——想着爆炒口重，得给他润润嗓子。<strong>那一刻，我觉得自己头顶散发着圣母般的舍友光辉，简直是济南年度十大杰出舍友候选人。</strong></p>
@@ -231,142 +236,17 @@
 <p><strong>博主的话：</strong> 如果你在济南街头看到两个骑电驴差点劈叉的人，不用怀疑，那可能就是我和我的“蛋黄舍友”。</p>
 <hr>
 
-            
-        </div>
     </div>
-    <div class="post-tags">
-        
-        <span class="icon">
-            <i class="fa-solid fa-tags fa-fw"></i>
-        </span>
-        
-        
-        
-        <span class="tag">
-            
-            <a href="/tags/%E6%97%A5%E8%AE%B0/" style="color: #00a596">日记</a>
-        </span>
-        
-        <span class="tag">
-            
-            <a href="/tags/%E7%94%9F%E6%B4%BB/" style="color: #00bcd4">生活</a>
-        </span>
-        
-        <span class="tag">
-            
-            <a href="/tags/%E5%90%83%E9%A5%AD/" style="color: #00a596">吃饭</a>
-        </span>
-        
-    </div>
-    <a href="/2026/01/18/%E5%AF%9D%E5%AE%A4%E6%97%A5%E8%AE%B0%E4%B9%8B%E5%92%B8%E9%B8%AD%E8%9B%8B/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2026/01/18/hello-world/">
-        <h2 class="post-title">Hello World</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2026/1/18
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>欢迎使用 Hexo！这是你的第一篇文章。请查阅 文档 以获取更多信息。如果你在使用 Hexo 时遇到任何问题，可以在 故障排除 中寻找答案，或者在 GitHub 上向我提问。</p>
-<p>快速入门</p>
-<ol>
-<li>创建新文章</li>
-</ol>
-<pre><code class="language-bash">hexo new &quot;My New Post&quot; 
-</code></pre>
-<p>更多信息：写作 (Writing)<br>2. 启动本地服务器 </p>
-<pre><code class="language-bash">hexo server 
-</code></pre>
-<p>更多信息：服务器 (Server)</p>
-<ol start="3">
-<li>生成静态文件</li>
-</ol>
-<pre><code class="language-bash">hexo generate 
-</code></pre>
-<p>更多信息：生成 (Generating)</p>
-<ol start="4">
-<li>部署到远程站点</li>
-</ol>
-<pre><code class="language-bash">hexo deploy
-</code></pre>
-<p>更多信息：部署 (Deployment)</p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2026/01/18/hello-world/" class="go-post">阅读全文</a>
-</div>
-
-
-        <div class="page-current">
     
-    <span class="current">1</span>
     
     
     
     
-</div>
-
+    <div id="comment">
+        <div id="waline-container"></div>
     </div>
     
-    <div id="home-card">
-        <div id="card-style">
-    <div id="card-div">
-        <div class="avatar">
-            <img src="/images/touxiang.jpg" alt="avatar" />
-        </div>
-        <div class="name"></div>
-        <div class="description">
-            <h3 id="👨‍💻-WSX"><a href="#👨‍💻-WSX" class="headerlink" title="👨‍💻 WSX"></a>👨‍💻 WSX</h3><p><strong>19岁 | 东北人在山东 🌊</strong><br>来自雪城牡丹江，现于齐鲁大地求学。</p>
-<blockquote>
-<p>“凛冬散尽，星辰长明。” </p>
-</blockquote>
-<p>很高兴在互联网的角落遇见你！</p>
-
-        </div>
-        
-        <div class="icon-links">
-            
-            <span class="icon-link">
-                <a target="_blank" rel="noopener" href="https://www.douyin.com/user/MS4wLjABAAAAdv81OL2bcrI-41AjezpAMGAiH8CYu18erSvhy6-txYU">
-                    <i
-                        class="fa-brands fa-tiktok fa-fw"
-                    ></i>
-                </a>
-            </span>
-            
-        </div>
-        
-        
-        <div class="friend-links">
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://daitanyu.top">YZDR</a>
-            </div>
-            
-        </div>
-        
-    </div>
-</div>
-
-    </div>
+    
     
 </div>
 
@@ -405,6 +285,29 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+<script>
+    Waline.init({
+        el: "#waline-container",
+        serverURL: "https://comment.daitanyu.top/",
+        commentCount: true,
+        pageview: false,
+        emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
+        meta: "nick,mail,link".split(","),
+        requiredMeta: "".split(","),
+        lang: "zh-CN",
+        wordLimit: 0,
+        pageSize: "10",
+        login: "disable",
+        
+    });
+</script>
+
+
+
     
 </body>
 </html>
