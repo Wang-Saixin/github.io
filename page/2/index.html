@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>新の狗窝</title>
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/touxiang.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+<script src="/js/lib/home.js"></script>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>加载中</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/jiazai.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>新の狗窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-Home fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;分类</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;新の狗窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-Home fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">分类</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div id="home-head">
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="/images/beijing.jpg"
+    ></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>新の狗窝</h1>
+                <h3></h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div
+    id="home-posts-wrap"
+    ref="homePostsWrap"
+    true
+>
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/2026/01/27/%E6%88%91%E6%98%AF%E8%B5%9B%E6%96%B0/">
+        <h2 class="post-title">我是赛新</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/1/27
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2026/01/27/%E6%88%91%E6%98%AF%E8%B5%9B%E6%96%B0/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2026/01/18/%E5%AF%9D%E5%AE%A4%E6%97%A5%E8%AE%B0%E4%B9%8B%E5%92%B8%E9%B8%AD%E8%9B%8B/">
+        <h2 class="post-title">寝室日记之咸鸭蛋</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E4%B8%AA%E4%BA%BA%E7%94%9F%E6%B4%BB/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                个人生活
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/1/18
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>大家好，我是 wsx。今天济南的风虽然没把泉城广场的泉标吹歪，但却把我对舍友的信任吹散了。故事的起因很简单：一枚咸鸭蛋，和一位永远活在自己饭碗里的舍友——dty。</p>
+<h3 id="1-所谓默契，全是我的一厢情愿"><a href="#1-所谓默契，全是我的一厢情愿" class="headerlink" title="1. 所谓默契，全是我的一厢情愿"></a>1. 所谓默契，全是我的一厢情愿</h3><p>傍晚时分，我和 dty 相约去吃那家挺火的 <strong>沈阳爆炒</strong>。排队打饭时，我眼尖地瞅见这货顺手拿了一个咸鸭蛋。</p>
+<p>当时我心里就开始了疯狂的心理建设：<br><em>“以我对他的了解，这一个蛋他肯定吃不完。”</em><br><em>“为了避免浪费，待会我就勉为其难地帮他消灭那个流油的蛋黄吧。”</em></p>
+<p>基于这种”深厚”的舍友情谊，我甚至没给自己买蛋，甚至还贴心地在旁边给他买了一瓶 <strong>蜂蜜柚子水</strong>——想着爆炒口重，得给他润润嗓子。<strong>那一刻，我觉得自己头顶散发着圣母般的舍友光辉，简直是济南年度十大杰出舍友候选人。</strong></p>
+<h3 id="2-那枚被”物理抹除”的蛋黄"><a href="#2-那枚被”物理抹除”的蛋黄" class="headerlink" title="2. 那枚被”物理抹除”的蛋黄"></a>2. 那枚被”物理抹除”的蛋黄</h3><p>坐下开饭后，我一边扒拉着碗里的爆炒，一边斜着眼角观察那枚鸭蛋。</p>
+<p>我等啊等，等他剥壳，等他开口问我：”wsx，你要不要来点？”<br>结果呢？这 byd（此处为文学修饰）连眼皮都没抬一下！他不仅没有分我一半的意思，甚至连一点”礼貌性询问”的流程都省了。</p>
+<p><strong>他就那样，当着我的面，以一种近乎冷酷的精准度，把那一整颗咸鸭蛋——包括我梦寐以求的灵魂红油蛋黄——全部塞进了他那无情的嘴里。</strong></p>
+<p>我手里握着那瓶象征友谊的蜂蜜柚子，看着他吃得满嘴流油，那一刻我悟了：<strong>在济南的冬天，心凉不一定要靠风，还可以靠舍友的胃口。</strong></p>
+<h3 id="3-蛋黄的”诅咒”与我的神之腿"><a href="#3-蛋黄的”诅咒”与我的神之腿" class="headerlink" title="3. 蛋黄的”诅咒”与我的神之腿"></a>3. 蛋黄的”诅咒”与我的神之腿</h3><p>带着一肚子”蛋黄怨念”，我气鼓鼓地坐上了他电动车的后座。回去的路上，虽然我心里还在盘算着下次怎么”报复”回来，但表面上咱还得维持寝室和谐，正有一搭没一搭地跟他唠着嗑。</p>
+<p>结果，可能真的是那枚蛋黄在冥冥之中显灵了，这大概就是传说中的”蛋应”。</p>
+<p>就在我俩聊得正欢时，电动车不知是压到了马路牙子还是这哥们儿被蛋黄糊住了心智，只听 <strong>“嘎巴”</strong> 一声巨响！车身突然一个华丽的横移，眼看整个人就要跟济南坚硬的马路来个亲密接触。</p>
+<p><strong>危急时刻，还是我！</strong> 虽然我心里气得要命，但本能反应让我瞬间伸出两条大长腿，死死撑住了地面。在那零点几秒的博弈中，我用我的腿，硬生生把这 byd 从摔得”鼻青脸肿”的边缘拉了回来。</p>
+<p><strong>要是没我这两条腿支着，这哥们儿今天高低得给济南市政修地砖做点”血汗贡献”。</strong></p>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>坐在后座稳住身形后，我看着他惊魂未定的后脑勺，陷入了沉思：<br>你说，这要是真摔下去了，我是该先扶他，还是先问他：”那蛋黄咸不咸？”</p>
+<p><strong>生活建议：</strong> 在济南跟 dty 吃饭，别指望他能分你蛋黄，更别指望他骑车能稳如泰山。以后坐他车，我不仅得自备饮料，还得自备一双好腿。</p>
+<hr>
+<p><strong>博主的话：</strong> 如果你在济南街头看到两个骑电驴差点劈叉的人，不用怀疑，那可能就是我和我的”蛋黄舍友”。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/%E6%97%A5%E8%AE%B0/" style="color: #00a596">日记</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/%E7%94%9F%E6%B4%BB/" style="color: #ff7d73">生活</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/%E5%90%83%E9%A5%AD/" style="color: #03a9f4">吃饭</a>
+        </span>
+        
+    </div>
+    <a href="/2026/01/18/%E5%AF%9D%E5%AE%A4%E6%97%A5%E8%AE%B0%E4%B9%8B%E5%92%B8%E9%B8%AD%E8%9B%8B/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2026/01/18/hello-world/">
+        <h2 class="post-title">Hello World</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/1/18
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>欢迎使用 Hexo！这是你的第一篇文章。请查阅 文档 以获取更多信息。如果你在使用 Hexo 时遇到任何问题，可以在 故障排除 中寻找答案，或者在 GitHub 上向我提问。</p>
+<p>快速入门</p>
+<ol>
+<li>创建新文章</li>
+</ol>
+<pre><code class="language-bash">hexo new &quot;My New Post&quot; 
+</code></pre>
+<p>更多信息：写作 (Writing)<br>2. 启动本地服务器 </p>
+<pre><code class="language-bash">hexo server 
+</code></pre>
+<p>更多信息：服务器 (Server)</p>
+<ol start="3">
+<li>生成静态文件</li>
+</ol>
+<pre><code class="language-bash">hexo generate 
+</code></pre>
+<p>更多信息：生成 (Generating)</p>
+<ol start="4">
+<li>部署到远程站点</li>
+</ol>
+<pre><code class="language-bash">hexo deploy
+</code></pre>
+<p>更多信息：部署 (Deployment)</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2026/01/18/hello-world/" class="go-post">阅读全文</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <a class="page-num" href="/">
+        <i class="fa-solid fa-caret-left fa-fw"></i>
+    </a>
+    <a class="page-num" href="/">1</a>
+    <span class="page-omit">...</span>
+    
+    <span class="current">2</span>
+    
+    
+    
+    
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/images/touxiang.jpg" alt="avatar" />
+        </div>
+        <div class="name"></div>
+        <div class="description">
+            <h3 id="👨‍💻-WSX"><a href="#👨‍💻-WSX" class="headerlink" title="👨‍💻 WSX"></a>👨‍💻 WSX</h3><p><strong>19岁 | 东北人在山东 🌊</strong><br>来自雪城牡丹江，现于齐鲁大地求学。</p>
+<blockquote>
+<p>“凛冬散尽，星辰长明。” </p>
+</blockquote>
+<p>很高兴在互联网的角落遇见你！</p>
+
+        </div>
+        
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://www.douyin.com/user/MS4wLjABAAAAdv81OL2bcrI-41AjezpAMGAiH8CYu18erSvhy6-txYU">
+                    <i
+                        class="fa-brands fa-tiktok fa-fw"
+                    ></i>
+                </a>
+            </span>
+            
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://daitanyu.top">YZDR</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+    </div>
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2026 - 2026 新の狗窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+        <div>
+            备案号：
+            
+            <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">湘ICP备2026001287号</a>
+            
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>
