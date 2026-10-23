@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>第二章 八个人，八把刀 | 新の狗窝</title>
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/touxiang.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>加载中</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/jiazai.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>新の狗窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-Home fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;分类</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;新の狗窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-Home fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">分类</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第二章 八个人，八把刀</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/10/24
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E8%BF%9E%E8%BD%BD/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                连载
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E8%BF%9E%E8%BD%BD/" style="color: #ff7d73">
+                    连载
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E7%A9%BF%E8%B6%8A/" style="color: #00bcd4">
+                    穿越
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%95%86%E6%88%98/" style="color: #03a9f4">
+                    商战
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%8F%91%E9%85%B5/" style="color: #ffa2c4">
+                    发酵
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>王文新在柳巷口站了半个时辰。</p>
+<p>他在看人。</p>
+<p>巷子不宽，两旁是低矮的瓦房，家家门前摆着水缸，缸里是泉水。做酒的、卖酒的、运酒的，挑担的、推车的、坐在门槛上抽旱烟的，从早到晚络绎不绝。他数了三遍，最后把目光落在一个蹲在墙根啃烧饼的汉子身上。</p>
+<p>那汉子二十出头，膀大腰圆，一件短褐绷在身上，吃一口烧饼，喝一口水，吃得极认真。</p>
+<p>“你是朱家的?”</p>
+<p>汉子抬头，嘴里还塞着饼，含糊道:”你咋知道?”</p>
+<p>“柳巷做吃食的，姓朱的就一家。你身上的面粉味，隔着三步都闻得见。”</p>
+<p>汉子愣了愣，把剩下的半张饼往怀里一塞，站起身来，比王文新高出半个头:”你是少东家?”</p>
+<p>“王文新。”</p>
+<p>“朱腾达。”汉子抹了把嘴，”我爹说，王家烧坊的东家换人了，让我来看看。”</p>
+<p>“看什么?”</p>
+<p>“看你还做不做。”朱腾达很直白，”做,我就回来。不做,我去别家。”</p>
+<p>王文新看着他，忽然笑了：”做。但我有个条件。”</p>
+<p>“你说。”</p>
+<p>“以后我在坊里说什么,你就照做。不懂也照做,事后再问。”</p>
+<p>朱腾达皱起眉:”凭啥?”</p>
+<p>“凭我让你吃上肉。”王文新说,”一天一顿,顿顿有肉。”</p>
+<p>朱腾达盯着他看了三息,伸手:”成交。”</p>
+<hr>
+<p>一个时辰后,后院的空地上站了七个人。</p>
+<p>朱腾达把人一个一个指过去:</p>
+<p>“戴檀予,算账的,天下最抠的一双手。”<br>瘦高个儿的年轻人推了推眼镜——其实没有眼镜,他只是习惯性地用指节顶了顶鼻梁——点了点头,手里还捏着半本账册。</p>
+<p>“房季轩,济南本地人,木匠出身。”<br>一个方脸汉子咧嘴一笑,拱手:”俺老房。少东家有事尽管说,中不中?”</p>
+<p>“席杰瑞,跑街的。济南府三百六十行,没有他不认识的耳朵。”<br>一个眼睛滴溜溜转的青年笑着作揖,顺带打量了一圈院墙,像是已经在算这墙能翻多高。</p>
+<p>“胡亦杰。”<br>矮一点的青年只报了名字,怀里抱着个药箱。他补了一句,”我不做菜,只治病,管药。”</p>
+<p>“伍正棋。”一个沉稳的黑脸青年站得笔直,”我以前在镖行待过。”<br>“伍哥是咱舍长。”朱腾达插嘴,”什么事他都要管。”</p>
+<p>“彭帅奇。”最后那个,眉毛浓,眼神凶,”叫我小贝也行,叫贝利亚也成,别叫别的。”</p>
+<p>“姚卓瑾。”角落里一个书生模样的青年拱了拱手,声音轻,”笔墨之事,交给在下。”</p>
+<p>王文新一个一个看过去。</p>
+<p>这七个人,加上他自己,八个。像极了他前世那间宿舍里的八张床——虽然脸都不一样了,可那股子气味,那股”你不说我也不问,你出事我第一个上”的气味,一模一样。</p>
+<p>他甚至恍惚觉得,自己是不是还没醒。</p>
+<hr>
+<p>“少东家的意思,是要重开坊?”戴檀予先开口了,问得极准,”银子呢?”</p>
+<p>“没有。”</p>
+<p>“如厕无纸,巧妇难炊。”戴檀予面无表情,”账上还剩四两三钱银子,不够买一石麦。”</p>
+<p>“不用买麦。”王文新说,”三十七坛酸酒,不扔。”</p>
+<p>众人都愣住了。</p>
+<p>“酸了的酒还能喝?”小贝怀疑地看着他。</p>
+<p>“不喝,用。”王文新蹲下身,用树枝在地上画了个圈,”酸酒里的酸,能洗瓮。瓮壁上的白膜,是脏东西长的。用酸水狠狠刷一遍,再用滚水烫,晒干,这才叫干净。”<br>他在圈外又画了一道,”干净了,再谈发酵。不干净,做一百坛也是白搭。”</p>
+<p>房季轩蹲下来看那圈,忽然抬头:”滚水烫瓮……那得多大的锅?俺家有个大铜盆,能改。”</p>
+<p>“能改就行。”</p>
+<p>“晒瓮得有场子。”</p>
+<p>“后院空地够。”</p>
+<p>“那还得有人守着,别让野猫把瓮口布叼了。”</p>
+<p>“伍哥管。”</p>
+<p>伍正棋点了下头:”中。”</p>
+<p>王文新看着他们一板一眼地接下去，心里那点悬着的东西，慢慢落了地。</p>
+<p>这不是他一个人的仗。</p>
+<hr>
+<p>傍晚,朱腾达在灶上支起大锅。没什么好食材,土豆、咸菜、一点猪油,煮了一锅糊糊,又贴了几个饼子。八个人围着锅蹲成一圈,一人一碗。</p>
+<p>房季轩吃了一口,咂咂嘴:”些些咸。”</p>
+<p>“嫌咸你别吃。”朱腾达瞪他。</p>
+<p>“俺没说不好吃嘛。”老房嘿嘿一笑,又添了一勺。</p>
+<p>戴檀予一边吃一边翻账册,把筷子都拿反了。</p>
+<p>胡亦杰放下碗,忽然问:”少东家,你那句’脏东西’,到底是个什么东西?”</p>
+<p>王文新抬头看他。</p>
+<p>这问题问到根子上了,可现在说不清。没有显微镜,没有培养皿,他总不能凭空画个球菌给他看。他想了想,说:</p>
+<p>“你看不见它,它看得见你。”</p>
+<p>胡亦杰皱眉。</p>
+<p>“曲里、瓮里、水里、手上,到处都有。你手不洗,它就跟你进瓮。瓮不烫,它就跟你过冬。它不闹的时候你看不见,它一闹,一坛酒就完了。”王文新把碗放下,”所以往后坊里规矩就一条——手要净,器要净,水要净。”</p>
+<p>“就这么简单?”</p>
+<p>“最难的就是这个。”</p>
+<p>院外传来打更声。一更天了。</p>
+<p>王文新抬头看了看天,夜色里,柳巷的灯笼一盏一盏亮起来,像有人在黑暗里点了一路火。</p>
+<p>他忽然想起自己前世写在论文扉页上的一句话——当时只是随便写的,现在想起来,像句谶语。</p>
+<p>“发酵是活的东西,你对它好,它才对你好。”</p>
+<p>——第二章 完——</p>
+
+    </div>
+    
+    
+    
+    
+    
+    <div id="comment">
+        <div id="waline-container"></div>
+    </div>
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2026 - 2026 新の狗窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+        <div>
+            备案号：
+            
+            <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">湘ICP备2026001287号</a>
+            
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+<script>
+    Waline.init({
+        el: "#waline-container",
+        serverURL: "https://comment.daitanyu.top/",
+        commentCount: true,
+        pageview: false,
+        emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
+        meta: "nick,mail,link".split(","),
+        requiredMeta: "".split(","),
+        lang: "zh-CN",
+        wordLimit: 0,
+        pageSize: "10",
+        login: "disable",
+        
+    });
+</script>
+
+
+
+    
+</body>
+</html>

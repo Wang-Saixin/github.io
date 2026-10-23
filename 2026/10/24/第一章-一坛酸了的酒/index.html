@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>第一章 一坛酸了的酒 | 新の狗窝</title>
+    <meta name="author" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <link rel="icon" href="/images/touxiang.jpg" />
+    <link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.cn" />
+<link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+/>
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+<script src="/js/lib/math.js"></script>
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>加载中</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/jiazai.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>新の狗窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-Home fa-fw"></i>
+            <span>&ensp;首页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;分类</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;新の狗窝</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-Home fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">首页</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">分类</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>第一章 一坛酸了的酒</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2026/10/24
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E8%BF%9E%E8%BD%BD/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                连载
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E8%BF%9E%E8%BD%BD/" style="color: #00a596">
+                    连载
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E7%A9%BF%E8%B6%8A/" style="color: #03a9f4">
+                    穿越
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%95%86%E6%88%98/" style="color: #00a596">
+                    商战
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%8F%91%E9%85%B5/" style="color: #03a9f4">
+                    发酵
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>王文新醒来的时候，鼻子里先灌进来的是一股酸味。</p>
+<p>不是陈醋那种爽利的酸，是酒坏了的那种酸——发闷、发黏，混着霉味，像有人在密闭的屋子里捂了一整个夏天的湿抹布。他躺在硬板床上，眼前是青灰色的瓦顶，梁上垂着一盏油灯，灯芯烧得只剩下一小截黑。</p>
+<p>“我这是在哪儿？”</p>
+<p>他撑起身，脑子一阵刺痛。记忆像被人搅过的浊酒，慢慢才沉淀下去：大三下学期，生物工程专业,发酵工程方向，实验室里那台恒温摇床还在转,他趴在桌上改一份关于酵母代谢的课程论文……然后是刺耳的刹车声，白茫茫的一片光。</p>
+<p>再然后，就是这股酸味。</p>
+<p>屋门被人一把推开，一个四十来岁的男人走进来，瘦脸，两撇鼠须，眼睛里没有半分暖意。</p>
+<p>“哟，醒了？”男人把袖口一拢，慢悠悠地开口，”文新啊，你这一觉睡得可真舒坦。烧坊的账，你可得给个说法了。”</p>
+<p>王文新愣愣看着他。奇怪的是，他认得这张脸——叫王有德，族叔。而他自己，叫王文新，十八岁，济南府泉城县柳巷人，王氏烧坊的少东家。</p>
+<p>这些记忆不属于他，却像早就长在他脑子里一样，清清楚楚。</p>
+<p>“什么账?”他听见自己问。</p>
+<p>“三十七坛酒，全酸了。”王有德伸手指了指后院的方向，声音里带着恰到好处的痛心，”你阿爹去得早，把烧坊交到你手里，你倒好——一坛好曲糟践成这样。行会那边已经知道了，说咱王家这一季的份例，怕是要退。你要么拿银子补上，要么……”</p>
+<p>他顿了顿，笑了一下：”这烧坊的坊契，交给族里代管。”</p>
+<p>王文新没接话。</p>
+<p>他不是认命的人，也不是那种一睁眼就哭天抢地的性子。他做实验做惯了，遇上问题第一反应不是慌，是找准变量。</p>
+<p>于是他掀开被子，光脚踩在地上，径直往后院走。</p>
+<p>王有德愣了一下：”哎，你去哪儿？”</p>
+<p>后院比前屋更糟。</p>
+<p>三间酒坊，两间空着，剩下一间里摆着二十来个陶瓮，瓮口上蒙着布，布已经被酸气浸透了。王文新走过去，掀开一块布，低头闻了闻。</p>
+<p>酸。还有一丝极淡的、甜腻的臭味。</p>
+<p>他又伸出指头，在瓮壁上蹭了一下，放到鼻尖。指腹上留着一层薄薄的白膜，滑腻腻的。</p>
+<p>“这瓮，谁管的?”</p>
+<p>角落里有个小厮怯怯抬头：”回、回少爷，是王禄管着。”</p>
+<p>“王禄人呢?”</p>
+<p>“……回乡下收麦去了。”</p>
+<p>王文新闭上眼睛，把那口气慢慢吐出来。</p>
+<p>如果是现代实验室，这件事十分钟就能定性：发酵液酸败，乳酸菌污染，要么是曲种不纯，要么是容器灭菌不彻底，要么是发酵温度失控。三个变量，逐个排查。</p>
+<p>可现在是古代。没有显微镜，没有培养基，没有温度计,连”细菌”这个词都没人造出来。</p>
+<p>他睁开眼,忽然想起一件事。</p>
+<p>“今天什么日子?”</p>
+<p>“回少爷,九月十六。”</p>
+<p>“九月十六……”王文新抬头看了看天。济南的九月，白天还热，夜里已经凉透，昼夜温差能有十几度。陶瓮放在院子里，白日暴晒，夜里骤冷。发酵最怕的就是这个——温度一跳，酵母就压不住杂菌，酸败菌趁虚而入。</p>
+<p>“这瓮，白天是不是放在日头底下晒?”</p>
+<p>小厮脸色一白：”是……王禄说，晒一晒，出酒快些。”</p>
+<p>王文新笑了一下。笑得有点冷。</p>
+<p>“他倒是会省事。”</p>
+<p>他转过身，正撞上追出来的王有德。</p>
+<p>“文新，你这是——“</p>
+<p>“叔。”王文新打断他,声音不高,却清楚得很,”这三十七坛酒酸了,不假。但不是曲坏了,也不是瓮坏了。是有人把瓮摆在太阳底下晒了一个月。”</p>
+<p>王有德脸上那点痛心凝了一下。</p>
+<p>“这话可不能乱说。”</p>
+<p>“我不乱说。”王文新蹲下去,用手指在瓮底刮了一层沉淀,摊在手心给他们看,”叔你看,这底下是白渣,一层软的。好酒发酵完了,底下是酒泥,紧实、发黄。这层白的,是酸了以后长出来的东西。”</p>
+<p>他抬起头,眼睛很静:”谁把瓮挪出去晒的,谁把酒糟践的。这账,得按这个算。”</p>
+<p>王有德的嘴唇动了动。</p>
+<p>院子里静下来。风从巷口吹进来,带着泉水汽,把那股酸味吹散了一点。</p>
+<p>王文新站起身,拍了拍手上的渣子。</p>
+<p>他心里清楚,这件事远没完。三十七坛酒不是小数,行会的份例、客户的定金、烧坊的名声，都悬在这一坛坛酸水上。</p>
+<p>但至少，他刚刚把”谁的错”这个问题，从自己身上挪开了。</p>
+<p>至于怎么把酒重新做出来,怎么做出一坛这个时代没见过的酒——</p>
+<p>那是另一场仗。</p>
+<p>——第一章 完——</p>
+
+    </div>
+    
+    
+    
+    
+    
+    <div id="comment">
+        <div id="waline-container"></div>
+    </div>
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2026 - 2026 新の狗窝
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+        <div>
+            备案号：
+            
+            <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">湘ICP备2026001287号</a>
+            
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+<script>
+    Waline.init({
+        el: "#waline-container",
+        serverURL: "https://comment.daitanyu.top/",
+        commentCount: true,
+        pageview: false,
+        emoji: "https://unpkg.com/@waline/emojis@1.2.0/weibo,https://unpkg.com/@waline/emojis@1.2.0/alus,https://unpkg.com/@waline/emojis@1.2.0/bilibili,https://unpkg.com/@waline/emojis@1.2.0/qq,https://unpkg.com/@waline/emojis@1.2.0/tieba,https://unpkg.com/@waline/emojis@1.2.0/tw-emoji".split(","),
+        meta: "nick,mail,link".split(","),
+        requiredMeta: "".split(","),
+        lang: "zh-CN",
+        wordLimit: 0,
+        pageSize: "10",
+        login: "disable",
+        
+    });
+</script>
+
+
+
+    
+</body>
+</html>
