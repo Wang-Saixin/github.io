@@ -85,6 +85,11 @@
             <span>&ensp;关于</span>
         </a>
         
+        <a href="/novel">
+            <i class="fa-solid fa-book-open fa-fw"></i>
+            <span>&ensp;小说</span>
+        </a>
+        
         <a href="/archives">
             <i class="fa-solid fa-box-archive fa-fw"></i>
             <span>&ensp;归档</span>
@@ -127,6 +132,15 @@
                     </div>
                 </a>
                 
+                <a href="/novel">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-book-open fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">小说</div>
+                    </div>
+                </a>
+                
                 <a href="/archives">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
@@ -163,7 +177,8 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div class="article">
+            
+<div class="article novel">
     <div>
         <h1>第四章 夜半曲香</h1>
     </div>
@@ -193,21 +208,21 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E7%A9%BF%E8%B6%8A/" style="color: #00bcd4">
+                <a href="/tags/%E7%A9%BF%E8%B6%8A/" style="color: #ffa2c4">
                     穿越
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/%E5%95%86%E6%88%98/" style="color: #00a596">
+                <a href="/tags/%E5%95%86%E6%88%98/" style="color: #03a9f4">
                     商战
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/%E5%8F%91%E9%85%B5/" style="color: #00bcd4">
+                <a href="/tags/%E5%8F%91%E9%85%B5/" style="color: #ff7d73">
                     发酵
                 </a>
             </span>
@@ -388,6 +403,25 @@
     </div>
     
     
+    
+
+    
+    
+    <nav class="novel-nav">
+        
+        <a class="nav-prev" href="/2026/10/24/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%B8%80%E7%BA%B8%E5%A5%91/">
+            <span class="nav-label">上一章</span>
+            <span class="nav-title">第三章 一纸契</span>
+        </a>
+        
+        <a class="nav-toc" href="/novel/">目录</a>
+        
+        <a class="nav-next" href="/2026/10/25/%E7%AC%AC%E4%BA%94%E7%AB%A0-%E5%B0%81%E5%9D%8A/">
+            <span class="nav-label">下一章</span>
+            <span class="nav-title">第五章 封坊</span>
+        </a>
+        
+    </nav>
     
 </div>
 

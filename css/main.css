@@ -973,3 +973,137 @@ ol li {
         padding-left: 20px;
     }
 }
+
+
+/* ===== 小说阅读优化（仅作用于 category=连载 的文章）===== */
+.article.novel .content {
+    font-size: 17px;
+    line-height: 2.05;
+    letter-spacing: 0.02em;
+}
+.article.novel .content p {
+    text-indent: 2em;
+    margin: 1.05em 0;
+}
+.article.novel .content p:first-of-type {
+    margin-top: 0;
+}
+.article.novel .content h3 {
+    text-indent: 0;
+    margin: 1.8em 0 0.9em;
+    padding-left: 12px;
+    border-left: 3px solid #00a596;
+}
+.article.novel .content blockquote {
+    text-indent: 0;
+    margin: 1.2em 0;
+    padding: 0.6em 1em;
+    border-left: 3px solid #00bcd4;
+    background: rgba(0, 188, 212, 0.06);
+}
+.article.novel .content hr {
+    border: none;
+    border-top: 1px dashed #cfd8dc;
+    margin: 2em auto;
+    width: 60%;
+}
+
+/* 上下章导航 */
+.novel-nav {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 40px 0 10px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+}
+.novel-nav a {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    transition: border-color 0.2s, background 0.2s;
+    text-decoration: none;
+    min-width: 0;
+}
+.novel-nav a:hover {
+    border-color: #00a596;
+    background: rgba(0, 165, 150, 0.05);
+}
+.novel-nav .nav-prev { text-align: left; }
+.novel-nav .nav-next { text-align: right; }
+.novel-nav .nav-label {
+    display: block;
+    font-size: 12px;
+    color: #5c6b72;
+    margin-bottom: 4px;
+}
+.novel-nav .nav-title {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.novel-nav .nav-toc {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    color: #00a596;
+}
+.novel-nav .nav-empty {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9aa7ad;
+    font-size: 12px;
+    padding: 10px;
+}
+
+/* 小说目录页 */
+.novel-toc {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.novel-toc li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 9px 4px;
+    border-bottom: 1px dashed #eceff1;
+}
+.novel-toc li a {
+    text-decoration: none;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.novel-toc li a:hover {
+    color: #00a596;
+}
+.novel-toc .toc-date {
+    flex: 0 0 auto;
+    font-size: 12px;
+    color: #9aa7ad;
+}
+
+@media (max-width: 768px) {
+    .article.novel .content {
+        font-size: 16px;
+        line-height: 1.95;
+    }
+    .novel-nav {
+        flex-wrap: wrap;
+    }
+    .novel-nav .nav-prev,
+    .novel-nav .nav-next {
+        flex: 1 1 40%;
+    }
+}

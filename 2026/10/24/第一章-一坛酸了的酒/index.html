@@ -85,6 +85,11 @@
             <span>&ensp;关于</span>
         </a>
         
+        <a href="/novel">
+            <i class="fa-solid fa-book-open fa-fw"></i>
+            <span>&ensp;小说</span>
+        </a>
+        
         <a href="/archives">
             <i class="fa-solid fa-box-archive fa-fw"></i>
             <span>&ensp;归档</span>
@@ -127,6 +132,15 @@
                     </div>
                 </a>
                 
+                <a href="/novel">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-book-open fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">小说</div>
+                    </div>
+                </a>
+                
                 <a href="/archives">
                     <div class="item">
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
@@ -163,7 +177,8 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div class="article">
+            
+<div class="article novel">
     <div>
         <h1>第一章 一坛酸了的酒</h1>
     </div>
@@ -193,7 +208,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E7%A9%BF%E8%B6%8A/" style="color: #00a596">
+                <a href="/tags/%E7%A9%BF%E8%B6%8A/" style="color: #ff7d73">
                     穿越
                 </a>
             </span>
@@ -207,14 +222,14 @@
             
             <span class="tag">
                 
-                <a href="/tags/%E5%8F%91%E9%85%B5/" style="color: #ffa2c4">
+                <a href="/tags/%E5%8F%91%E9%85%B5/" style="color: #ff7d73">
                     发酵
                 </a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/%E8%BF%9E%E8%BD%BD%E5%B0%8F%E8%AF%B4/" style="color: #ff7d73">
+                <a href="/tags/%E8%BF%9E%E8%BD%BD%E5%B0%8F%E8%AF%B4/" style="color: #00a596">
                     连载小说
                 </a>
             </span>
@@ -326,6 +341,20 @@
     </div>
     
     
+    
+
+    
+    
+    <nav class="novel-nav">
+        <span class="nav-empty">已是第一章</span>
+        <a class="nav-toc" href="/novel/">目录</a>
+        
+        <a class="nav-next" href="/2026/10/24/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%85%AB%E4%B8%AA%E4%BA%BA%E5%85%AB%E6%8A%8A%E5%88%80/">
+            <span class="nav-label">下一章</span>
+            <span class="nav-title">第二章 八个人，八把刀</span>
+        </a>
+        
+    </nav>
     
 </div>
 
