@@ -2,7 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wsx.daitanyu.top/2026/11/03/%E7%AC%AC%E4%BA%8C%E5%8D%81%E7%AB%A0-%E4%B9%9D%E9%87%8D%E5%BC%80%E5%BC%A0/</loc>
+    
+    <lastmod>2026-11-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wsx.daitanyu.top/2026/11/03/%E7%AC%AC%E4%B9%9D%E7%AB%A0-%E9%93%81%E7%9B%92%E9%87%8C%E7%9A%84%E8%B4%A6/</loc>
+    
+    <lastmod>2026-11-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wsx.daitanyu.top/novel/index.html</loc>
     
     <lastmod>2026-11-03</lastmod>
     
@@ -138,15 +156,6 @@
   
   <url>
     <loc>https://wsx.daitanyu.top/2026/11/03/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E5%80%BA%E4%B8%BB%E8%BF%9B%E9%97%A8/</loc>
-    
-    <lastmod>2026-11-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wsx.daitanyu.top/2026/11/03/%E7%AC%AC%E4%BA%8C%E5%8D%81%E7%AB%A0-%E4%B9%9D%E9%87%8D%E5%BC%80%E5%BC%A0/</loc>
     
     <lastmod>2026-11-03</lastmod>
     
@@ -497,15 +506,6 @@
   </url>
   
   <url>
-    <loc>https://wsx.daitanyu.top/novel/index.html</loc>
-    
-    <lastmod>2026-10-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wsx.daitanyu.top/2026/01/18/hello-world/</loc>
     
     <lastmod>2026-10-23</lastmod>
@@ -542,7 +542,7 @@
   </url>
   
   <url>
-    <loc>https://wsx.daitanyu.top/archives/index.html</loc>
+    <loc>https://wsx.daitanyu.top/categories/index.html</loc>
     
     <lastmod>2026-10-23</lastmod>
     
@@ -551,7 +551,7 @@
   </url>
   
   <url>
-    <loc>https://wsx.daitanyu.top/categories/index.html</loc>
+    <loc>https://wsx.daitanyu.top/archives/index.html</loc>
     
     <lastmod>2026-10-23</lastmod>
     
