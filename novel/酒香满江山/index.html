@@ -302,7 +302,7 @@
 (function () {
   var data = JSON.parse(document.getElementById('novelData').textContent || '[]');
   if (!data.length) return;
-  var KEY = 'reader:' + &#34;酒香满江山&#34;;
+  var KEY = 'reader:' + "酒香满江山";
   var saved = {};
   try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { saved = {}; }
 
